@@ -10,7 +10,7 @@ const TextInput = ({ extractKeywords }) => {
     if (text === '') {
       toast({
         title: 'Text field is empty',
-        description: 'Please enter some text to extract keywords',
+        description: 'Please enter a question',
         status: 'error',
         duration: 3000,
         isCloseable: false
@@ -23,7 +23,7 @@ const TextInput = ({ extractKeywords }) => {
   return (
     <>
       <Textarea
-        bg='blue.400'
+        bg='blue.600'
         color='white'
         padding={4}
         marginTop={6}
@@ -40,7 +40,7 @@ const TextInput = ({ extractKeywords }) => {
         _hover={{ bg: 'blue.700' }}
         onClick={submitText}
       >
-        Extract Keywords
+        Ask Question
       </Button>
     </>
   )

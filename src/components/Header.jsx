@@ -6,10 +6,10 @@ const Header = () => {
     <>
       <Image src={logo} alt='logo' width={100} marginBottom='1rem' />
       <Heading color='white' marginBottom='1rem'>
-        AI Keyword Extracter
+        Fitness Expert
       </Heading>
       <Text>
-        Paste in your text below
+        Ask a fitness related question.
       </Text>
     </>
   )
