@@ -17,7 +17,7 @@ const KeywordsModal = ({ keywords, loading, isOpen, closeModal }) => {
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>
-          Keywords
+          Answer
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody display='flex' alignItems='center' justifyItems='center'>
