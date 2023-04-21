@@ -15,6 +15,7 @@ const App = () => {
     setIsOpen(true)
 
     console.log(typeof text)
+    console.log(import.meta.env.VITE_OPENAI_API_KEY)
 
     const options= {
       method: 'POST',
