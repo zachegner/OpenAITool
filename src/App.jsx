@@ -3,14 +3,14 @@ import { useState } from "react"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import TextInput from "./components/TextInput"
-import KeywordsModal from "./components/KeywordsModal"
+import AnswersModal from "./components/AnswersModal"
 
 const App = () => {
-  const [keywords, setKeywords] = useState('');
+  const [answers, setAnswers] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const extractKeywords = async (text) => {
+  const extractAnswers = async (text) => {
     setLoading(true)
     setIsOpen(true)
 
@@ -25,7 +25,7 @@ const App = () => {
       },
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',
-        // messages: `Extract keywords from this text. Make the first letter of each word uppercase and seperate with commas\n\n\ ${text}`,
+        // messages: `Extract answers from this text. Make the first letter of each word uppercase and seperate with commas\n\n\ ${text}`,
         messages: [
           {"role": "system", "content": "You a fitness and healthcare expert.  The user can ask you any question pertaining to fitness or health, but if they ask anything else, tell them you are sorry and cannot answer any questions that do not have to do with fitness or health."},
           {"role": "user", "content": `${text}`},
@@ -44,7 +44,7 @@ const App = () => {
     const data = json.choices[0].message.content
 
     console.log(data)
-    setKeywords(data)
+    setAnswers(data)
     setLoading(false)
   }
 
@@ -56,10 +56,10 @@ const App = () => {
     <Box bg='blue.800' color='white' height='100vh' paddingTop={130}>
       <Container maxW='3xl' centerContent>
         <Header />
-        <TextInput extractKeywords={extractKeywords} />
+        <TextInput extractAnswers={extractAnswers} />
         <Footer />
       </Container>
-      <KeywordsModal keywords={keywords} loading={loading} isOpen={isOpen} closeModal={closeModal} />
+      <AnswersModal answers={answers} loading={loading} isOpen={isOpen} closeModal={closeModal} />
     </Box>
   )
 }

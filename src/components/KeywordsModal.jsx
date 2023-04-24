@@ -11,7 +11,7 @@ import {
   CircularProgress
 } from '@chakra-ui/react'
 
-const KeywordsModal = ({ keywords, loading, isOpen, closeModal }) => {
+const AnswersModal = ({ answers, loading, isOpen, closeModal }) => {
   return (
     <Modal isOpen={isOpen} onClose={closeModal}>
       <ModalOverlay />
@@ -25,7 +25,7 @@ const KeywordsModal = ({ keywords, loading, isOpen, closeModal }) => {
             <CircularProgress isIndeterminate color='blue.300' />
           ) : (
             <Text>
-              {keywords}
+              {answers}
             </Text>
           )}
         </ModalBody>
@@ -39,4 +39,4 @@ const KeywordsModal = ({ keywords, loading, isOpen, closeModal }) => {
   )
 }
 
-export default KeywordsModal
+export default AnswersModal
