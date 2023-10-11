@@ -14,8 +14,8 @@ const App = () => {
     setLoading(true)
     setIsOpen(true)
 
-    console.log(typeof text)
-    console.log(import.meta.env.VITE_OPENAI_API_KEY)
+    //console.log(typeof text)
+    //console.log(import.meta.env.VITE_OPENAI_API_KEY)
 
     const options= {
       method: 'POST',
@@ -36,14 +36,14 @@ const App = () => {
       })
     }
     const response = await fetch(import.meta.env.VITE_OPENAI_API_URL, options)
-    console.log(response)
+    //console.log(response)
 
     const json = await response.json()
 
-    console.log(json)
+    //console.log(json)
     const data = json.choices[0].message.content
 
-    console.log(data)
+    //console.log(data)
     setAnswers(data)
     setLoading(false)
   }

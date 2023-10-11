@@ -13,7 +13,6 @@ import {
 
 const AnswersModal = ({ answers, loading, isOpen, closeModal }) => {
   const lines = answers.split('\n')
-  console.log(lines)
 
   return (
     <Modal isOpen={isOpen} onClose={closeModal} size={'xl'}>
