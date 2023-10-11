@@ -12,8 +12,11 @@ import {
 } from '@chakra-ui/react'
 
 const AnswersModal = ({ answers, loading, isOpen, closeModal }) => {
+  const lines = answers.split('\n')
+  console.log(lines)
+
   return (
-    <Modal isOpen={isOpen} onClose={closeModal}>
+    <Modal isOpen={isOpen} onClose={closeModal} size={'xl'}>
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>
@@ -24,9 +27,11 @@ const AnswersModal = ({ answers, loading, isOpen, closeModal }) => {
           {loading ? (
             <CircularProgress isIndeterminate color='blue.300' />
           ) : (
-            <Text>
-              {answers}
-            </Text>
+            <div>
+              {lines.map((line, index) => (
+                <Text key={index}>{line == '' ? '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~' : line}</Text>
+              ))}
+            </div>
           )}
         </ModalBody>
         <ModalFooter>
