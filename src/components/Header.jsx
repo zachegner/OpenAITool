@@ -1,5 +1,5 @@
 import { Heading, Image, Text } from '@chakra-ui/react'
-import logo from '../assets/light-bulb.svg'
+import logo from '../assets/fitness.ico'
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
         Fitness Expert
       </Heading>
       <Text>
-        Ask a fitness related question.
+        Ask a fitness related question. This chatbot will not answer beyond the scope of fitness.
       </Text>
     </>
   )

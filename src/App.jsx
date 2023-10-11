@@ -53,7 +53,7 @@ const App = () => {
   }
 
   return (
-    <Box bg='blue.800' color='white' height='100vh' paddingTop={130}>
+    <Box bg='blue.700' color='white' height='100vh' paddingTop={130}>
       <Container maxW='3xl' centerContent>
         <Header />
         <TextInput extractAnswers={extractAnswers} />

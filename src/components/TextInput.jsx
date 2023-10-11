@@ -23,7 +23,7 @@ const TextInput = ({ extractAnswers }) => {
   return (
     <>
       <Textarea
-        bg='blue.600'
+        bg='blue.500'
         color='white'
         padding={4}
         marginTop={6}
@@ -33,11 +33,11 @@ const TextInput = ({ extractAnswers }) => {
       />
 
       <Button
-        bg='blue.500'
+        bg='blue.400'
         color='white'
         marginTop={4}
         width='100%'
-        _hover={{ bg: 'blue.700' }}
+        _hover={{ bg: 'blue.500' }}
         onClick={submitText}
       >
         Ask Question
